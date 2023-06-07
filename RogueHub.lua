@@ -113,6 +113,7 @@ end)
 
 
 d:Button("Anti Afk",function()
+    AntiAfk()
     print("Anti Afk Started now go away", antiidle)
 end)
 
