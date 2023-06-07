@@ -5,6 +5,7 @@ getgenv().bandagesell = true
 getgenv().antiidle = true
 getgenv().autospin = true
 getgenv().speed = 0.1
+getgenv().dailyspin = true
 
 
     function getNumber()
@@ -85,7 +86,7 @@ local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloo
 local w = library:CreateWindow("Rogue Hub") -- Creates the window
 local b = w:CreateFolder("Millionaire Farm")
 local c = w:CreateFolder("Teleport to -")
-local d = w:CreateFolder("Auto OP shits")
+local d = w:CreateFolder("Auto Thingy")
 
 b:Toggle("Buy",function(bool)
     getgenv().bandagebuy = bool
@@ -116,6 +117,13 @@ d:Button("Anti Afk",function()
     AntiAfk()
     print("Anti Afk Started now go away", antiidle)
 end)
+
+d:Button("Daily Spin",function()
+    while dailyspin == true do
+        game:GetService("ReplicatedStorage").spins_thing_remote:InvokeServer()
+    end
+end)
+
 
 d:Button("Kamdo spinner",function()
     KamadoSpin()
