@@ -16,13 +16,13 @@ getgenv().speed = 0.1
                 return tonumber(number)
             end
         end
-    
-        return nil 
+
+        return nil
     end
 
 
 function bandagebuyer()
-
+    while bandagebuy == true do
         local args = {
             [1] = "buysomething",
             [2] = game:GetService("Players").LocalPlayer,
@@ -34,6 +34,9 @@ function bandagebuyer()
 
     game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
     task.wait()
+
+    end
+
 end
 
 function AntiAfk()
