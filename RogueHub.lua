@@ -109,7 +109,7 @@ b:Toggle("Sell",function(bool)
 end)
 
 
-c:Button("Anti Afk",function()
+d:Button("Anti Afk",function()
     print("Anti Afk Started now go away", antiidle)
 end)
 
