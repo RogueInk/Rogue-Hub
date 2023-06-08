@@ -57,7 +57,7 @@ local targetclan = {
      "Kamado"
     }
 
-    while getgenv().autospin do
+    while autospin ==true do
         local playerClan = game:GetService("ReplicatedStorage").Player_Data[game.Players.LocalPlayer.Name].Clan.Value
         if table.find(targetclan, playerClan) then
             getgenv().autospin = false
